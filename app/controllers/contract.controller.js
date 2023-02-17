@@ -1,27 +1,27 @@
-export.create = (req, res) => {
+exports.create = (req, res) => {
     res.send({ message: "Create handler"});
 };
 
-export.findAll = (req, res) => {
+exports.findAll = (req, res) => {
     res.send({ message: "findAll handler"});
 };
 
-export.findOne = (req, res) => {
+exports.findOne = (req, res) => {
     res.send({ message: "findOne handler"});
 };
 
-export.update = (req, res) => {
+exports.update = (req, res) => {
     res.send({ message: "update handler"});
 };
 
-export.delete = (req, res) => {
+exports.delete = (req, res) => {
     res.send({ message: "delete handler"});
 };
 
-export.deleleAll = (req, res) => {
+exports.deleteAll = (req, res) => {
     res.send({ message: "deleleAll handler"});
 };
 
-export.findAllFavorite = (req, res) => {
+exports.findAllFavorite = (req, res) => {
     res.send({ message: "findAllFavorite handler"});
 };

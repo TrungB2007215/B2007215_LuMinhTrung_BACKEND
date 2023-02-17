@@ -4,6 +4,7 @@ const cors = require("cors");
 const contractsRouter = require("./app/routes/contract.route");
 const ApiError = require("./app/api-error");
 const app = expess();
+const loginRouter = require("./app/routes/login.route");
 
 app.use(cors());
 app.use(expess.json());
@@ -13,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/contacts", contractsRouter);
-
+app.use("/login", loginRouter);
 //handle 404 response
 app.use((req, res, next) => {
     //code ở đây sẽ chạy khi không có route được định nghĩa nào
@@ -27,7 +28,7 @@ app.use((err, req, res, next) =>{
     //trong các đoạn code xử lý ở các route, gọi next(error)
     //sẽ chuyển về middleware xử lý lỗi này
     return res.status(err.statusCode || 500).json({
-        message: error.message || "Internal Server Error"
+        message: err.message || "Internal Server Error"
     })
 })
 
