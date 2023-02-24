@@ -11,4 +11,8 @@ router.route("/login")
     .get(login.loginNow)
     .post(login.loginNow);
 
+router.route("/:id")
+    .get(login.loginNow)
+    .post(login.loginNow);
+
 module.exports = router;

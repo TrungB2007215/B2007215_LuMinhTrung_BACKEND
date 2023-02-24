@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/contacts", contractsRouter);
 app.use("/login", loginRouter);
+
 //handle 404 response
 app.use((req, res, next) => {
     //code ở đây sẽ chạy khi không có route được định nghĩa nào
