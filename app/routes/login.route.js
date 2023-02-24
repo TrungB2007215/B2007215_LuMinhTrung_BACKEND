@@ -4,15 +4,10 @@ const login = require("../controllers/login.controller");
 const router = express.Router();
 
 router.route("/")
-    .get(login.loginWith)
-    .post(login.loginWith);
+    .post(login.register);
 
 router.route("/login")
-    .get(login.loginNow)
-    .post(login.loginNow);
-
-router.route("/:id")
-    .get(login.loginNow)
-    .post(login.loginNow);
+    .get(login.login)
+    .post(login.login);
 
 module.exports = router;
